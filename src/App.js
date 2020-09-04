@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CardList from './components/CardList.js'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="https://lh3.googleusercontent.com/proxy/x82IMNUsPa2QIT2-yV4WyVjAblllysN4Gojn0Tl28MWITDXSWP77VdP12tqCoSpGzz6hv_ZfTZbzqxfBSW5PhsPT-gTYg6GaOzgUgXhCw_SOU0qlkPTD-VnPWAGnJHLKLNceeA" className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          By the Hearth...
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <div>
+        <CardList />
+      </div>
     </div>
   );
 }
