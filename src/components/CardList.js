@@ -2,6 +2,9 @@ import React from 'react'
 import Card from './Card.js'
 
 export default class CardList extends React.Component {
+    state = {
+        cards : []
+    }
     render () {
         const allCards = [
             {name: "Potato",cost: 7,image: "imgurl",attack: 6, defense: 4},
