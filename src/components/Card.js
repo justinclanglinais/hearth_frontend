@@ -12,7 +12,7 @@ export default class Card extends React.Component {
                     {cardtype}
                 </div>
                 <div>
-                    <img src={image} height="100"/>
+                    <img src={image} height="100" alt="hearthstone card"/>
                 </div>
                 <div>
                     {cost}
