@@ -41,7 +41,7 @@ class App extends React.Component {
             Toggle Content Loaded
           </button>
           {this.state.loaded ? <h3>Content Loaded</h3> : <h3>Content Not Loaded</h3>}
-          <button onClick={() => console.log(this.state.cards)}>
+          <button onClick={() => console.log(this.state)}>
             Console Log props
           </button>
         </header>
