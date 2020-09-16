@@ -1,7 +1,8 @@
 import React from 'react'
 import Card from './Card.js'
+import PrivacyHOC from '../HOCs/PrivacyHOC.js'
 
-export default class CardList extends React.Component {
+class CardList extends React.Component {
     state = {
         cards : []
     }
@@ -16,10 +17,14 @@ export default class CardList extends React.Component {
         ]
         return (
             <div>
-                {allCards.map(c => {
-                    return <div><Card card={c}/></div>
-                })}
+                <div>
+                    {allCards.map(c => {
+                        return <div><Card card={c}/></div>
+                    })}
+                </div>
             </div>
         )
     }
 }
+
+export default PrivacyHOC(CardList);
