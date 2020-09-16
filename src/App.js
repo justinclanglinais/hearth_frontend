@@ -1,12 +1,21 @@
 import React from 'react';
 import './App.css';
 import CardList from './components/CardList.js'
+import { Api } from './services/Api.js'
+
 
 class App extends React.Component {
   state = {
     loggedIn : false,
     cards : [],
     loaded : false
+  }
+  componentDidMount = () => {
+    Api.cards.fetchCards().then(data=>{
+      this.setState({
+        cards: data
+      })
+    })
   }
   handleClickLogin = () => {
     this.setState({
