@@ -3,7 +3,6 @@ import './App.css';
 import CardList from './components/CardList.js'
 import { Api } from './services/Api.js'
 
-
 class App extends React.Component {
   state = {
     loggedIn : false,
@@ -13,7 +12,8 @@ class App extends React.Component {
   componentDidMount = () => {
     Api.cards.fetchCards().then(data=>{
       this.setState({
-        cards: data
+        cards: data,
+        loaded: true
       })
     })
   }
@@ -40,6 +40,9 @@ class App extends React.Component {
             Toggle Content Loaded
           </button>
           {this.state.loaded ? <h3>Content Loaded</h3> : <h3>Content Not Loaded</h3>}
+          <button onClick={() => console.log(this.state.cards)}>
+            Console Log props
+          </button>
         </header>
         <div>
           <CardList loggedIn={this.state.loggedIn} cards={this.state.cards} loaded={this.state.loaded}/>

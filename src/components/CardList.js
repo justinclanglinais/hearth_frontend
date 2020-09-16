@@ -16,7 +16,7 @@ class CardList extends React.Component {
         return (
             <div>
                 <div>
-                    {allCards.map(c => {
+                    {this.props.cards.map(c => {
                         return <div><Card card={c}/></div>
                     })}
                 </div>

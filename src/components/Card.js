@@ -2,23 +2,26 @@ import React from 'react'
 
 export default class Card extends React.Component {
     render () {
-        const {name, cost, image, attack, defense} = this.props.card
+        const {name, cardtype, image, cost, attack, health} = this.props.card
         return (
             <div>
                 <div>
                     {name}
                 </div>
                 <div>
-                    {cost}
+                    {cardtype}
                 </div>
                 <div>
                     {image}
                 </div>
                 <div>
+                    {cost}
+                </div>
+                <div>
                     {attack}
                 </div>
                 <div>
-                    {defense}
+                    {health}
                 </div>
             </div>
         )
