@@ -1,11 +1,9 @@
 import React from 'react'
 import Card from './Card.js'
 import PrivacyHOC from '../HOCs/PrivacyHOC.js'
+import LoadingHOC from '../HOCs/LoadingHOC.js'
 
 class CardList extends React.Component {
-    state = {
-        cards : []
-    }
     render () {
         const allCards = [
             {name: "Potato",cost: 7,image: "imgurl",attack: 6, defense: 4},
@@ -27,4 +25,4 @@ class CardList extends React.Component {
     }
 }
 
-export default PrivacyHOC(CardList);
+export default LoadingHOC(PrivacyHOC(CardList));

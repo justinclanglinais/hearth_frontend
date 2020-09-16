@@ -7,7 +7,7 @@ export default function PrivacyHOC(WrappedComponent) {
                 return this.props.loggedIn
             }
             render () {
-                return this.isLoggedIn() ? <WrappedComponent /> : <h1>Sorry, you don't have access to this content...</h1>
+                return this.isLoggedIn() ? <WrappedComponent {...this.props}/> : <h1>Sorry, you don't have access to this content...</h1>
             }
         }
     )
