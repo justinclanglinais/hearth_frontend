@@ -11,6 +11,7 @@ class App extends React.Component {
   }
   componentDidMount = () => {
     Api.cards.fetchCards().then(data=>{
+      console.log("fetch",data)
       this.setState({
         cards: data,
         loaded: true
