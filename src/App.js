@@ -46,7 +46,7 @@ class App extends React.Component {
           </button>
         </header>
         <div>
-          <CardList loggedIn={this.state.loggedIn} cards={this.state.cards} loaded={this.state.loaded}/>
+          <CardList style="container" loggedIn={this.state.loggedIn} cards={this.state.cards} loaded={this.state.loaded}/>
         </div>
       </div>
     );
