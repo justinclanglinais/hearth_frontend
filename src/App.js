@@ -13,7 +13,6 @@ function App () {
   function fetchCards () {
     Api.cards.fetchCards().then(data=>{
       setCards(data);
-      setLoaded(true);
     })
   }
   function handleClickLogin () {
