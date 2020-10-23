@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import CardList from './components/CardList.js'
 import { Api } from './services/Api.js'
@@ -8,12 +8,14 @@ function App () {
   const [cards, setCards] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(
+  useEffect(fetchCards)
+  
+  function fetchCards () {
     Api.cards.fetchCards().then(data=>{
       setCards(data);
-      setLoaded(true)
+      setLoaded(true);
     })
-  )
+  }
   function handleClickLogin () {
     setLoggedIn(!loggedIn)
   }
