@@ -1,17 +1,14 @@
-import React from 'react';
+import {React, useState} from 'react';
 import './App.css';
 import CardList from './components/CardList.js'
 import { Api } from './services/Api.js'
 
-class App extends React.Component {
-  state = {
-    loggedIn : false,
-    cards : [],
-    loaded : false
-  }
+function App () {
+  [loggedIn, setLoggedIn] = useState(false);
+  [cards, setCards] = useState([]);
+  [loaded, setLoaded] = useState(false);
   componentDidMount = () => {
     Api.cards.fetchCards().then(data=>{
-      console.log("fetch",data)
       this.setState({
         cards: data,
         loaded: true
